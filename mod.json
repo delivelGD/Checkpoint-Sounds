@@ -9,7 +9,7 @@
 	},
 	"id": "delivel.checkpoint_sounds",
 	"name": "Checkpoint Sounds",
-	"version": "v1.0.3",
+	"version": "v1.1.0",
 	"developer": "delivel",
 	"description": "Sounds for checkpoinds!",
 	"tags": [
@@ -26,7 +26,49 @@
 	},
 	"links": {
 		"source": "https://github.com/delivelGD/Checkpoint-Sounds"
+	},
+	"settings": {
+		"customization-title": {
+			"type": "title",
+			"name": "Customization"		
+		},
+		"enable-creating-sounds": {
+			"type": "bool",
+			"name": "Enable sounds of checkpoints creation",
+			"default": true
+		},
+		"enable-deleting-sounds": {
+			"type": "bool",
+			"name": "Enable sounds of checkpoints deletion",
+			"default": true
+		},
+		"choose-custom-sound-for-creating": {
+			"type": "file",
+			"name": "Choose custom sound for creating checkpoints",
+			"default": "YourSound",
+			"control": {
+				"dialog": "open",
+				"filters": [
+					{
+						"files": ["*.ogg", "*.mp3", "*.wav"],
+						"description": "OGG/MP3/WAV files"
+					}
+				]
+			}
+		},
+		"choose-custom-sound-for-deleting": {
+			"type": "file",
+			"name": "Choose custom sound for deleting checkpoints",
+			"default": "YourSound",
+			"control": {
+				"dialog": "open",
+				"filters": [
+					{
+						"files": ["*.ogg", "*.mp3", "*.wav"],
+						"description": "OGG/MP3/WAV files"
+					}
+				]
+			}
+		}
 	}
 }
-
-
