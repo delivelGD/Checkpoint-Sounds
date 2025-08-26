@@ -10,8 +10,7 @@ class $modify(PlayLayer) {
         auto ret = PlayLayer::createCheckpoint();
         if (!ret) return nullptr;
 
-        auto soundPath = Mod::get()->getResourcesDir() / "checkpointSound.ogg";
-        FMODAudioEngine::sharedEngine()->playEffect(soundPath.string().c_str());
+        FMODAudioEngine::sharedEngine()->playEffect("checkpointSound.ogg"_spr);
 
         return ret;
     }
@@ -20,7 +19,6 @@ class $modify(PlayLayer) {
 
         PlayLayer::removeCheckpoint(p0);
 
-        auto soundPath1 = Mod::get()->getResourcesDir() / "checkpointSound1.ogg";
-        FMODAudioEngine::sharedEngine()->playEffect(soundPath1.string().c_str());
+        FMODAudioEngine::sharedEngine()->playEffect("checkpointSound1.ogg"_spr);
     }
 };
