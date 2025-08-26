@@ -1,6 +1,5 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PlayLayer.hpp>
-#include <Geode/fmod/fmod.hpp>
 
 using namespace geode::prelude;
 
