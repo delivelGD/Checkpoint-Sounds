@@ -12,13 +12,12 @@ class $modify(PlayLayer) {
 
         auto customFile1 = Mod::get()->getSettingValue<std::filesystem::path>("choose-custom-sound-for-creating");
         auto enableCSounds = Mod::get()->getSettingValue<bool>("enable-creating-sounds");
-        if (customFile1 == "YourSound" && enableCSounds == true) {
-
-        FMODAudioEngine::sharedEngine()->playEffect("checkpointSound.ogg"_spr);
-        }
-        else {
-            if (enableCSounds == true) {
-                FMODAudioEngine::sharedEngine()->playEffect(customFile1.string().c_str());
+        if (enableCSounds) {
+            if (customFile1.empty() || customFile1 == "YourSound") {
+                FMODAudioEngine::sharedEngine()->playEffect("checkpointSound.ogg"_spr);
+            }
+            else {
+                FMODAudioEngine::sharedEngine()->playEffect(string::pathToString(customFile1).c_str());
             }
         }
 
@@ -31,13 +30,12 @@ class $modify(PlayLayer) {
 
         auto customFile2 = Mod::get()->getSettingValue<std::filesystem::path>("choose-custom-sound-for-deleting");
         auto enableDSounds = Mod::get()->getSettingValue<bool>("enable-deleting-sounds");
-        if (customFile2 == "YourSound" && enableDSounds == true) {
-
-        FMODAudioEngine::sharedEngine()->playEffect("checkpointSound1.ogg"_spr);
-        }
-        else {
-            if (enableDSounds == true) {
-                FMODAudioEngine::sharedEngine()->playEffect(customFile2.string().c_str());
+        if (enableDSounds) {
+            if (customFile2.empty() || customFile2 == "YourSound") {
+                FMODAudioEngine::sharedEngine()->playEffect("checkpointSound1.ogg"_spr);
+            }
+            else {
+                FMODAudioEngine::sharedEngine()->playEffect(string::pathToString(customFile2).c_str());
             }
         }
     }
