@@ -10,4 +10,6 @@ You want something new? You're tired of silence? Here's the solution...
 2. To make your own sounds open mod settings and select the sound you want.
 3. You can enable and disable sounds for creation and removing sounds in settings.
 
+
 ### Good game!
+special thanks to hiimjasmine00 !!
